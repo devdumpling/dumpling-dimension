@@ -21,16 +21,16 @@ class IndexPage extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.timeoutId = setTimeout(() => {
-        this.setState({loading: ''});
+      this.setState({ loading: '' });
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     if (this.timeoutId) {
-        clearTimeout(this.timeoutId);
+      clearTimeout(this.timeoutId);
     }
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
@@ -103,8 +103,8 @@ class IndexPage extends React.Component {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
+            <Footer timeout={this.state.timeout} />
           </div>
-          <Footer timeout={this.state.timeout} />
           <div id="bg"></div>
         </div>
       </Layout>
