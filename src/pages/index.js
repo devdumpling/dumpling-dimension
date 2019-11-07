@@ -3,7 +3,6 @@ import Layout from '../components/layout'
 
 import Header from '../components/Header'
 import Main from '../components/Main'
-import Footer from '../components/Footer'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -103,8 +102,8 @@ class IndexPage extends React.Component {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
-            <Footer timeout={this.state.timeout} />
           </div>
+          <Footer timeout={this.state.timeout} />
           <div id="bg"></div>
         </div>
       </Layout>
